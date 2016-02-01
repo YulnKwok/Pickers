@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D084AC61C5FC431006F2F0C /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D084AC51C5FC431006F2F0C /* statedictionary.plist */; };
 		8D1F50421C3AB568009E22E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F50411C3AB568009E22E4 /* AppDelegate.swift */; };
 		8D1F50441C3AB568009E22E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1F50431C3AB568009E22E4 /* ViewController.swift */; };
 		8D1F50471C3AB568009E22E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1F50451C3AB568009E22E4 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D084AC51C5FC431006F2F0C /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
 		8D1F503E1C3AB568009E22E4 /* Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1F50411C3AB568009E22E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D1F50431C3AB568009E22E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				8D1F50731C3AB5EB009E22E4 /* DoubleComponentPickerViewController.swift */,
 				8D1F50751C3AB621009E22E4 /* DependentComponentPickerViewController.swift */,
 				8D1F50771C3AB63E009E22E4 /* CustomPickerViewController.swift */,
+				8D084AC51C5FC431006F2F0C /* statedictionary.plist */,
 				8D1F50481C3AB568009E22E4 /* Assets.xcassets */,
 				8D1F504A1C3AB568009E22E4 /* LaunchScreen.storyboard */,
 				8D1F504D1C3AB568009E22E4 /* Info.plist */,
@@ -246,6 +249,7 @@
 			files = (
 				8D1F504C1C3AB568009E22E4 /* LaunchScreen.storyboard in Resources */,
 				8D1F50491C3AB568009E22E4 /* Assets.xcassets in Resources */,
+				8D084AC61C5FC431006F2F0C /* statedictionary.plist in Resources */,
 				8D1F50471C3AB568009E22E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

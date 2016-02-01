@@ -176,9 +176,35 @@
                     <view key="view" contentMode="scaleToFill" id="Feh-zg-1wN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARb-vY-3XC">
+                                <rect key="frame" x="140" y="28" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xL5-ZE-hh1" id="VAP-IL-INm"/>
+                                    <outlet property="delegate" destination="xL5-ZE-hh1" id="Eeo-Bg-maf"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxV-fE-eQm">
+                                <rect key="frame" x="272" y="266" width="56" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="xL5-ZE-hh1" eventType="touchUpInside" id="XnN-lF-MJJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fxV-fE-eQm" firstAttribute="centerX" secondItem="Feh-zg-1wN" secondAttribute="centerX" id="9pI-W9-pqQ"/>
+                            <constraint firstItem="fxV-fE-eQm" firstAttribute="top" secondItem="ARb-vY-3XC" secondAttribute="bottom" constant="22" id="FbT-YP-l9B"/>
+                            <constraint firstItem="ARb-vY-3XC" firstAttribute="centerX" secondItem="Feh-zg-1wN" secondAttribute="centerX" id="FgR-yg-Dgg"/>
+                            <constraint firstItem="ARb-vY-3XC" firstAttribute="top" secondItem="vjc-t2-4ef" secondAttribute="bottom" constant="8" id="vRa-cL-vlz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="Dependent" id="veG-iT-NVC"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="ARb-vY-3XC" id="5bo-VR-zOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ad4-j1-9G7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

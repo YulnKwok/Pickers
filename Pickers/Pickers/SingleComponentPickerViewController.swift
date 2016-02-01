@@ -9,8 +9,9 @@
 import UIKit
 
 class SingleComponentPickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
+    
     //MARK:-
-    //MAEK:Picker Data Source Methods
+    //MARK:Picker Data Source Methods
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
