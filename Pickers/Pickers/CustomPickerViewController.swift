@@ -8,7 +8,16 @@
 
 import UIKit
 
-class CustomPickerViewController: UIViewController {
+class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
+    
+    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var winLabel: UILabel!
+    private var images:[UIImage]!
+    
+    @IBAction func spin(sender: UIButton)
+    {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +30,18 @@ class CustomPickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 5
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return images.count
+    }
+    
+    
+    
 
+    
     /*
     // MARK: - Navigation
 
