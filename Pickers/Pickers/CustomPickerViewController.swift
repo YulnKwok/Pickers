@@ -16,11 +16,34 @@ class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPicker
     
     @IBAction func spin(sender: UIButton)
     {
+        var win = false
+        var lastValue = 0
+        var numInRow = 0
+        for i in 0..<5
+        {
+            let newValue = Int(arc4random_uniform(UInt32(images.count)))
+            if newValue == lastValue{
+                ++numInRow
+            }else{
+                lastValue = 1
+            }
+            lastValue = newValue
+            
+            picker.selectRow(newValue, inComponent: i, animated: true)
+            picker.reloadComponent(i)
+            if numInRow >= 3{
+                win = true
+            }
+            winLabel.text = win ? "Winner!":" "
+        }
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        images = [UIImage(named: "apple")!,UIImage(named: "bar")!,UIImage(named: "cherry")!,UIImage(named: "crown")!,UIImage(named: "lemon")!,UIImage(named: "seven")!]
+        winLabel.text = " "
 
         // Do any additional setup after loading the view.
     }
@@ -36,6 +59,12 @@ class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPicker
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return images.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        let image = images[row]
+        let imageView = UIImageView(image: image)
+        return imageView
     }
     
     
