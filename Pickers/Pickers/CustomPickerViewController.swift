@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
     
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var winLabel: UILabel!
     private var images:[UIImage]!
+    @IBOutlet weak var button:UIButton!
+    private var winSound:SystemSoundID = 0
+    private var crunchSound:SystemSoundID = 0
+    
     
     @IBAction func spin(sender: UIButton)
     {
@@ -38,6 +43,15 @@ class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPicker
         }
         
     }
+    
+    func showButton(){
+        button.hidden = false
+    }
+    
+    func playWinSound(){
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +81,9 @@ class CustomPickerViewController: UIViewController,UIPickerViewDelegate,UIPicker
         return imageView
     }
     
-    
-    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 64
+    }
 
     
     /*
